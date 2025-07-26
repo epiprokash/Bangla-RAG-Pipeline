@@ -47,27 +47,27 @@ To build a lightweight and accurate RAG system that:
 আপনার প্রশ্ন: কাকে অনুপমের ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে?
 উত্তর: মামাকে
 ```
-### 🧠 RAG Architecture
-# Components:
- * OCR Extraction: pytesseract, pdf2image, poppler-utils
+# 🧠 RAG Architecture
+## Components:
+ * OCR Extraction: **pytesseract, pdf2image, poppler-utils**
 
 * Chunking: Sentence-based, ~100 words per chunk
 
-* Embeddings: sagorsarker/bangla-bert-base
+* Embeddings: **sagorsarker/bangla-bert-base**
 
-* Similarity Search: FAISS (IndexFlatL2)
+* Similarity Search: **FAISS (IndexFlatL2)**
 
-* QA Model: deepset/xlm-roberta-base-squad2 (supports multilingual input)
+* QA Model: **deepset/xlm-roberta-base-squad2** (supports multilingual input)
 
 
-### 📄 Workflow Overview
+## 📄 Workflow Overview
 1. Convert PDF to images
 
-2. Extract Bengali text using OCR (tesseract-ocr-ben)
+2. Extract Bengali text using **OCR (tesseract-ocr-ben)**
 
 3. Clean and chunk the text (~100 words per chunk)
 
-4. Embed each chunk using Bangla-BERT
+4. Embed each chunk using **Bangla-BERT**
 
 5. Store vectors in FAISS
 
@@ -75,7 +75,7 @@ To build a lightweight and accurate RAG system that:
 
     * Embed query
 
-    * Retrieve top-K relevant chunks
+    * Retrieve **top-K** relevant chunks
 
-    * Answer using XLM-RoBERTa QA model
+    * Answer using **XLM-RoBERTa QA model**
 

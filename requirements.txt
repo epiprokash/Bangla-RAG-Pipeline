@@ -17,5 +17,11 @@ nltk==3.8.1
 numpy==1.26.4
 regex==2024.4.16
 
-# Bonus: For running async functions inside Jupyter
+# Async helper
 nest_asyncio==1.6.0
+
+# Language Detection
+langdetect==1.0.9
+
+# RAG Framework (Optional / Bonus Tools)
+langchain==0.2.2
