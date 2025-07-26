@@ -18,10 +18,13 @@ To build a lightweight and accurate RAG system that:
 ### 🔧 Step 1: **Install Python:** Download and install Python from [python.org](https://www.python.org/).
 
 ### 🔧 Step 2: **Clone the Repository:**
+
     ```bash
     git clone https://github.com/epiprokash/Bangla-RAG-Pipeline
     ```
+
 ### 🔧 Step 3: **Install Required Libraries:**
+
     ```bash
     pip install -r requirements.txt
     ```
@@ -44,4 +47,35 @@ To build a lightweight and accurate RAG system that:
 আপনার প্রশ্ন: কাকে অনুপমের ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে?
 উত্তর: মামাকে
 ```
+### 🧠 RAG Architecture
+# Components:
+ * OCR Extraction: pytesseract, pdf2image, poppler-utils
+
+* Chunking: Sentence-based, ~100 words per chunk
+
+* Embeddings: sagorsarker/bangla-bert-base
+
+* Similarity Search: FAISS (IndexFlatL2)
+
+* QA Model: deepset/xlm-roberta-base-squad2 (supports multilingual input)
+
+
+### 📄 Workflow Overview
+1. Convert PDF to images
+
+2. Extract Bengali text using OCR (tesseract-ocr-ben)
+
+3. Clean and chunk the text (~100 words per chunk)
+
+4. Embed each chunk using Bangla-BERT
+
+5. Store vectors in FAISS
+
+6. For user queries:
+
+    * Embed query
+
+    * Retrieve top-K relevant chunks
+
+    * Answer using XLM-RoBERTa QA model
 
