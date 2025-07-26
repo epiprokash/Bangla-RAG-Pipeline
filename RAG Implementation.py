@@ -1,7 +1,7 @@
 
 # Bangla RAG System Implementation
 
-!pip install transformers sentence-transformers faiss-cpu nltk torch
+!pip install transformers sentence-transformers faiss-cpu nltk torch langchain langdetect 
 !pip install sacremoses  # Required for mBART tokenizer
 import nltk
 nltk.download('punkt')
