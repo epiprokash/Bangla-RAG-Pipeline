@@ -38,7 +38,7 @@ To build a lightweight and accurate RAG system that:
     ```
 3. **Run the RAG Pipeline using Extracted text**
      ```bash
-    python RAG implementation.py
+    python main.py
     ```
 4. **Interact with the System:** Type your question and press Enter to get a response based on the retrieved information.
 ## Example
